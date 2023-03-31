@@ -17,6 +17,7 @@ function App () {
   const location= useLocation();
   const onSearch=(character)=>{
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
+    // http://localhost:3001/rickandmorty/${character} //cambiar por new server
       .then((response) => response.json())
       .then((data) => {
          if (data.name) {
