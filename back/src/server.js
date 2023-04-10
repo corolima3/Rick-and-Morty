@@ -1,54 +1,28 @@
 const express = require('express');
-
+const morgan=require("morgan")
 // const getCharById= require("./src/controllers/getCharById");
 // const getCharDetail= require("./src/controllers/getCharDetail");
 //const  router  = require('./src/routes');
-const router= require('./routes/index')
-
-const cors = require('cors')
+const router = require('./routes/index.js')
+const saveApiData = require('./controller/saveApiData')
+const cors = require('cors');
+const { sequelize } = require('./DB_connection.js');
 
 const server = express();
 
-const PORT= 3001;
-server.use(express.json());
-server.use(cors());
-server.use('/rickandmorty', router)
+ const PORT= 3001;
+ server.use(morgan("dev"));
+ server.use(express.json());
+ server.use(cors());
+ server.use('/rickandmorty',router)
 
-server.listen(PORT, () => {
-    console.log(`Server raised in port http://localhost:${PORT}`);
+
+server.listen(PORT, async() => {
+    await sequelize.sync({force:true}) 
+    // pasa a false aqui sequelize se conecta? investigar, false!
+    await saveApiData();
+    console.log(`Server raised in port http://localhost:${PORT}`)
  });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // const http=require('http');
