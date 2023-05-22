@@ -10,7 +10,7 @@ async function getApiData ()  {
             let apiData = await axios.get(`https://rickandmortyapi.com/api/character?page=${i}`);
           
             const pageCharacters=apiData.data.results.map((char)=>{
-                console.log(`${i}`);
+                console.log(`saveApidata`);
                 return {
                     id: char.id,
                     name: char.name,
@@ -25,7 +25,7 @@ async function getApiData ()  {
             allArr= [...allArr, ...pageCharacters]
            
         }
-        console.log('holafin');
+        //console.log('holafin');
         return allArr;
     } catch (error) {  return {msg:error.message} }
 

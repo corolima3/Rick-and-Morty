@@ -1,12 +1,12 @@
 import './App.css'
-import Cards from './components/Cards.jsx'
+import Cards from './components/Cards/Cards.jsx'
 //import SearchBar from './components/SearchBar.jsx'
-import Nav from "./components/Nav.jsx"
+import Nav from "./components/NavBar/NavBar.jsx"
 import {useState, useEffect} from "react";
-import About from './components/About';
-import Detail from './components/Detail';
-import Form from './components/Form'
-import Favorites from './components/Favorites';
+import About from './components/About/About.jsx';
+import Detail from './components/Detail/Detail';
+import Form from './components/Form/Form'
+import Favorites from './components/Favorite/Favorites';
 import{ Routes, Route, useNavigate, useLocation} from "react-router-dom";
 
 
@@ -15,6 +15,7 @@ function App () {
   
   const navigate = useNavigate();
   const location= useLocation();
+
   const onSearch=(character)=>{
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
     // http://localhost:3001/rickandmorty/${character} //cambiar por new server
@@ -25,15 +26,16 @@ function App () {
          } else {
             window.alert('No hay personajes con ese ID');
          }
-      })
+      });
+     
   }
+
   const onClose=(id)=>{
-    setCharacters(
-      characters.filter(character=>character.id!==id)
-    )
+    setCharacters( characters.filter(character=>character.id!==id) )
   }
 
 const [access, setAccess] = useState(false);
+
 const username = 'caracol@gmail.com';
 const password = '1password';
 
@@ -45,7 +47,7 @@ function login(userData) {
 }
 useEffect(() => {
   !access && navigate('/');
-}, [access]);
+  }, [access, navigate]); //cambie [acess] a [acess,navigate]
 
   return (
     <div className='App' style={{ padding: '25px' }}>
@@ -58,10 +60,7 @@ useEffect(() => {
         <Route path='/about' element={<About />} />
         <Route path='/favorites' element={<Favorites />} />
         <Route path='/detail/:detailId' element={<Detail />} />
-        
       </Routes>
-        
-      <hr />
     </div>
   )
 }

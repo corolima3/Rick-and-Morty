@@ -1,7 +1,8 @@
 import { useSelector,useDispatch} from "react-redux";
 import { useState, useEffect } from "react";
-import {filterCards, orderCards} from "../redux/actions"
-import Card from "./Card";
+import {filterCards, orderCards} from "../../redux/actions"
+import Card from "../Card/Card";
+import style from './Favorites.module.css'
 
 function Favorites() {
     
@@ -43,20 +44,22 @@ function Favorites() {
  
 
             </div>
+            <div className={style.cards}>
             {
-            favourites?.map((element, index) => {
-             return ( 
-              <Card 
-                key={index}
-                id={element.id}
-                name ={element.name}
-                species = {element.species} 
-                gender={element.gender} 
-                image = {element.image} 
-                onClose={() => element.onClose(element.id)} />
-                )
-              })
-            }
+                favourites?.map((element, index) => {
+                    return ( 
+                        <Card 
+                        key={index}
+                        id={element.id}
+                        name ={element.name}
+                        species = {element.species} 
+                        gender={element.gender} 
+                        image = {element.image} 
+                        onClose={() => element.onClose(element.id)} />
+                        )
+                    })
+                }
+            </div>
         </div>
     );
 }

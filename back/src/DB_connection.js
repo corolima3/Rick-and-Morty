@@ -6,13 +6,12 @@ const character = require('./models/Character')
 EJERCICIO 01
 A la instancia de Sequelize le falta la URL de conexión.
 Recuerda pasarle la información de tu archivo '.env'.
-
 */
+
 //URL ----> 
 const sequelize = new Sequelize(
-
     `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/rickandmorty`,
-   { logging: false, native: false }
+    { logging: false, native: false }
 );
 
 /*

@@ -1,4 +1,56 @@
-.listItem{
+
+.input {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.button {
+  padding: 5px 10px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ff8f8b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .listItem{
   border: solid black ;
   color: #000;
   width: 15vw;
@@ -38,4 +90,4 @@
     margin: 1px;
     font-size: 15px
   
-  }
+  } */

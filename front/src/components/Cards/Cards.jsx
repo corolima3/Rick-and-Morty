@@ -1,14 +1,15 @@
-import Card from './Card';
-import styles from "./cards.module.css";
+import Card from '../Card/Card';
+import style from "./Cards.module.css";
 
 function Cards({characters, onClose}) {
 
    return(
-      <span  className={styles.orden}>
-         {characters.map(({id,name,species,gender,image})=>{
+      <span  className={style.cards}>
+         {characters.map(({id,name,species,gender,image}, index)=>{
             return <Card
-               key={id}
-               name={name}
+               key={index}
+               id={id}
+               name={name.toUpperCase()}
                species={species}
                gender={gender}
                image={image}

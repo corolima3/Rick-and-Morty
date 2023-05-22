@@ -1,10 +1,11 @@
- const axios = require('axios');
+//const axios = require('axios');
 const {character}= require('../DB_connection')
+
 async function getAll (req, res){
   try {
     const allcharacter= await character.findAll();
     res.status(200).json(allcharacter);
-  } catch (error) {res.status(400).json({postMessage: error.message})
+  } catch (error) {res.status(400).json({Message: error.message})
     
   }
 }

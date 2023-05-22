@@ -1,8 +1,7 @@
 import { useState } from "react";
-import {validation} from "./validation"
+import {validation} from './validation';
 
 function Form (props)    {
-
 
     const [userData, setUserData] = useState({
         username: '', 
