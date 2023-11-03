@@ -1,0 +1,68 @@
+.container_detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+}
+
+.container_detail .detail {
+    width: 650px;
+    height: 550px;
+    border-radius: 10px;
+    border: 0px solid rgba(255, 255, 246, 0.5);
+    backdrop-filter: blur(5px);
+    margin-top: 12vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    box-shadow: 0 0 25px rgba(255, 255, 246, 0.5);
+
+}
+
+.detail .divide {
+    color: var(--color-light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15%;
+    margin-right: 4rem;
+
+}
+
+.text_detail h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    padding-block: 2rem;
+    text-transform: uppercase;
+
+}
+
+.text_detail h5 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.detail .divide div img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.button_back {
+    position: absolute;
+    top: 6rem;
+    left: 4rem;
+    padding: 13px;
+    color: var(--color-text);
+    background: var(--color-white);
+    font-size: 3.7rem;
+    border-radius: 50%;
+    transition: var(--transition);
+    font-weight: bold;
+
+
+}
+
+button .button_back:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}

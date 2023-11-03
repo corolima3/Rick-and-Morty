@@ -1,0 +1,68 @@
+.container_favorite {
+    display: block;
+    width: 76vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+header{
+    position: relative;
+    top: 3rem;
+}
+h2 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--color-white);
+    backdrop-filter: blur(12px);
+    border-bottom: 3px solid rgba(255, 255, 240, 0.5);
+    text-align: center;
+    padding-bottom: 0.7rem;
+
+}
+
+.filters {
+    text-align: center;
+    position: relative;
+    top: 2.3rem;
+    display: flex;
+    justify-content: center;
+}
+.container_favorite .filters > *{
+    text-align: center;
+    margin-inline: 20px;
+}
+.container_favorite .filters select{
+    background: var(--color-white);
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.container_cards{
+    position: relative;
+    top: 8rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 72vh;
+    backdrop-filter: blur(15px);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(255, 255, 230, 0.5);
+}
+.return .button_return {
+    position: absolute;
+    top: 6rem;
+    left: 4rem;
+    padding: 13px;
+    color: var(--color-text);
+    background: var(--color-white);
+    font-size: 3.7rem;
+    border-radius: 50%;
+    transition: var(--transition);
+    font-weight: bold;
+}
+
+.return .button_return:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}

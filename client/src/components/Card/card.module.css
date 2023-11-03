@@ -1,0 +1,73 @@
+.container_card {
+  width: 230px;
+  height: 310px;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #c9d4adb3;
+  border-radius: 5px;
+  margin: 20px 1rem 0;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+  gap: 20px;
+}
+
+.container_card:hover {
+  background-color: #41413ec9;
+  color: beige;
+  transform: scale(1.05);
+}
+
+.imagen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: -1;
+}
+.button {
+  border-radius: 3px;
+  background-color: rgb(255, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  padding: 1px 5px;
+  right: 5px;
+  top: 5px;
+}
+.container_card .button_favorite > * {
+  background: transparent;
+}
+.container_card .button_favorite button{
+  width: 50p;
+  height: 50px;
+  position: absolute;
+  padding: 4px;
+  border-radius: 50%;
+  left: 5px;
+  top: 60%;
+  font-size: 1.25rem;
+  transition: var(--transition);
+}
+.container_card .button_favorite button:hover{
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.4);
+}
+.date_card{
+  position: absolute;
+  bottom: 12px;
+  text-align: center;
+}
+.container_card .date_card .inline > *{
+  display: inline-block;
+  color: var(--color-text);
+
+}
+.container_card .date_card .inline p:last-child{
+  margin-left: 10px;
+}
