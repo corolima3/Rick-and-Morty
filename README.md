@@ -17,7 +17,7 @@ Este proyecto utiliza las siguientes tecnologías:
     Express
 ## Available Scripts
 
-Para correr el proyect, posicionate en la fold front.
+Para correr el proyect, posicionate en la fold `'client'` .
 
 ### `npm start`
 
