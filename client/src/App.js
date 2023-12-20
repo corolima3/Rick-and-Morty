@@ -60,6 +60,5 @@ function App() {
     </div>
   )
 }
-// <Route path='login' element={<Form />} />
 
 export default App

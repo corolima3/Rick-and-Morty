@@ -18,6 +18,8 @@ function SearchBar({ onSearch }) {
       <div className={style.container__search}>
          <input
             className={style.input}
+            min={1}
+            max={850}
             type="number"
             value={character}
             onChange={handleChange}

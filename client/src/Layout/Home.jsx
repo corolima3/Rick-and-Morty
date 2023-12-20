@@ -27,7 +27,7 @@ export default function Home(props) {
     }
 
     const onClose = (id) => {
-        setCharacters( characters.filter(character => character.id !== id) )
+        setCharacters(characters.filter(character => character.id !== id))
     }
     // const onClose = characterId => {
     //     setCharacters(characters.filter(character => character["id"] !== characterId )) }
